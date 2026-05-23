@@ -1,0 +1,353 @@
+/* ═══════════════════════════════════════════
+   SHADOW BAR — shared base
+   ═══════════════════════════════════════════ */
+.shadow-bar {
+    position: fixed;
+    z-index: 50;
+    background: rgba(0,0,0,0.75);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  
+}
+
+/* ── handle (label strip) ── */
+.bar-handle {
+    padding: 10px;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-align: center;
+    opacity: 0.6;
+    font-family: "Cinzel", serif;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    user-select: none;
+}
+
+/* ── content wrapper ── */
+.bar-content {
+    opacity: 0;
+    transition: opacity 0.5s ease 0.15s;
+}
+.shadow-bar.active .bar-content {
+    opacity: 1;
+}
+
+/* ═══════════════════════════════════════════
+   TOP BAR — Skills & Interests
+   ═══════════════════════════════════════════ */
+.bar-top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 380px;
+    max-height: 40px;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+.bar-top.active {
+    transition: all 0.6s cubic-bezier(.2,.8,.2,1);
+    max-height: 80vh;
+    width: 90vw;
+    max-width: 800px;
+    background: rgba(0,0,0,0.92);
+}
+.bar-top .bar-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 16px;
+}
+
+/* skill tag pill */
+.skill-tag {
+    display: inline-block;
+    padding: 5px 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 2px;
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    color: #aaa;
+    font-family: "Cinzel", serif;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+.skill-tag:hover {
+    color: #fff;
+    border-color: rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.04);
+}
+
+/* ═══════════════════════════════════════════
+   LEFT BAR — Professional Work
+   ═══════════════════════════════════════════ */
+.bar-left {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 40px;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+}
+
+.bar-left.active {
+    transition: all 0.6s cubic-bezier(.2,.8,.2,1);
+    max-width: 3950px;
+    background: rgba(0,0,0,0.92);
+}
+
+.bar-left .bar-handle {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    border-bottom: none;
+    border-right: 1px solid rgba(255,255,255,0.05);
+    padding: 14px 10px;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bar-left.active .bar-handle {
+    writing-mode: horizontal-tb;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.bar-left .bar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 14px;
+}
+
+/* ═══════════════════════════════════════════
+   RIGHT BAR — Projects & Code
+   ═══════════════════════════════════════════ */
+.bar-right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 40px;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+}
+
+.bar-right.active {
+    transition: all 0.6s cubic-bezier(.2,.8,.2,1);
+    max-width: 320px;
+    background: rgba(0,0,0,0.92);
+}
+
+.bar-right .bar-handle {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    border-bottom: none;
+    border-left: 1px solid rgba(255,255,255,0.05);
+    padding: 14px 10px;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bar-right.active .bar-handle {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    min-height: auto;
+    border-left: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.bar-right .bar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 14px;
+}
+
+/* ═══════════════════════════════════════════
+   BOTTOM BAR — The World
+   ═══════════════════════════════════════════ */
+.bar-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    max-height: 40px;
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+}
+.bar-bottom.active {
+    transition: all 0.6s cubic-bezier(.2,.8,.2,1);
+    max-height: 60vh;
+    width: 80vw;
+    max-width: 700px;
+    background: rgba(0,0,0,0.92);
+}
+
+.bar-bottom .bar-handle {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.bar-bottom .bar-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px;
+}
+
+/* ═══════════════════════════════════════════
+   SHARED — bar items (links)
+   ═══════════════════════════════════════════ */
+.bar-item {
+    text-decoration: none;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    font-family: "Cinzel", serif;
+    padding: 6px 4px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+.bar-item:last-child {
+    border-bottom: none;
+}
+.bar-item:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.03);
+}
+
+/* thumbnail placeholder */
+.thumb {
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    flex-shrink: 0;
+    transition: border-color 0.3s ease;
+}
+img.thumb {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: border-color 0.3s ease;
+}
+.bar-item:hover .thumb {
+    border-color: rgba(255,255,255,0.25);
+}
+
+/* ═══════════════════════════════════════════
+   CATEGORY SECTIONS — inside top bar
+   ═══════════════════════════════════════════ */
+.bar-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+.bar-section-title {
+    width: 100%;
+    text-align: center;
+    font-family: "Cinzel", serif;
+    font-size: 0.55rem;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    padding: 10px 0 6px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: 4px;
+}
+.bar-section:first-child .bar-section-title {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 4px;
+}
+
+/* ═══════════════════════════════════════════
+   REVEAL ANIMATION — items slide in
+   ═══════════════════════════════════════════ */
+.bar-item,
+.skill-tag {
+    transform: translateY(4px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.shadow-bar.active .bar-item,
+.shadow-bar.active .skill-tag {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* stagger */
+.shadow-bar.active .bar-item:nth-child(1),
+.shadow-bar.active .skill-tag:nth-child(1) { transition-delay: 0.03s; }
+.shadow-bar.active .bar-item:nth-child(2),
+.shadow-bar.active .skill-tag:nth-child(2) { transition-delay: 0.06s; }
+.shadow-bar.active .bar-item:nth-child(3),
+.shadow-bar.active .skill-tag:nth-child(3) { transition-delay: 0.09s; }
+.shadow-bar.active .bar-item:nth-child(4),
+.shadow-bar.active .skill-tag:nth-child(4) { transition-delay: 0.12s; }
+.shadow-bar.active .bar-item:nth-child(5),
+.shadow-bar.active .skill-tag:nth-child(5) { transition-delay: 0.15s; }
+.shadow-bar.active .bar-item:nth-child(6),
+.shadow-bar.active .skill-tag:nth-child(6) { transition-delay: 0.18s; }
+.shadow-bar.active .bar-item:nth-child(7),
+.shadow-bar.active .skill-tag:nth-child(7) { transition-delay: 0.21s; }
+.shadow-bar.active .bar-item:nth-child(8),
+.shadow-bar.active .skill-tag:nth-child(8) { transition-delay: 0.24s; }
+.shadow-bar.active .bar-item:nth-child(9),
+.shadow-bar.active .skill-tag:nth-child(9) { transition-delay: 0.27s; }
+.shadow-bar.active .bar-item:nth-child(10),
+.shadow-bar.active .skill-tag:nth-child(10) { transition-delay: 0.3s; }
+.shadow-bar.active .bar-item:nth-child(11),
+.shadow-bar.active .skill-tag:nth-child(11) { transition-delay: 0.33s; }
+.shadow-bar.active .bar-item:nth-child(12),
+.shadow-bar.active .skill-tag:nth-child(12) { transition-delay: 0.36s; }
+.shadow-bar.active .bar-item:nth-child(13),
+.shadow-bar.active .skill-tag:nth-child(13) { transition-delay: 0.39s; }
+.shadow-bar.active .bar-item:nth-child(14),
+.shadow-bar.active .skill-tag:nth-child(14) { transition-delay: 0.42s; }
+.shadow-bar.active .bar-item:nth-child(15),
+.shadow-bar.active .skill-tag:nth-child(15) { transition-delay: 0.45s; }
+.shadow-bar.active .bar-item:nth-child(16),
+.shadow-bar.active .skill-tag:nth-child(16) { transition-delay: 0.48s; }
+.shadow-bar.active .bar-item:nth-child(17),
+.shadow-bar.active .skill-tag:nth-child(17) { transition-delay: 0.51s; }
+.shadow-bar.active .bar-item:nth-child(18),
+.shadow-bar.active .skill-tag:nth-child(18) { transition-delay: 0.54s; }
+.shadow-bar.active .bar-item:nth-child(19),
+.shadow-bar.active .skill-tag:nth-child(19) { transition-delay: 0.57s; }
+.shadow-bar.active .bar-item:nth-child(20),
+.shadow-bar.active .skill-tag:nth-child(20) { transition-delay: 0.6s; }
+.shadow-bar.active .bar-item:nth-child(21),
+.shadow-bar.active .skill-tag:nth-child(21) { transition-delay: 0.63s; }
+.shadow-bar.active .bar-item:nth-child(22),
+.shadow-bar.active .skill-tag:nth-child(22) { transition-delay: 0.66s; }
+.shadow-bar.active .bar-item:nth-child(23),
+.shadow-bar.active .skill-tag:nth-child(23) { transition-delay: 0.69s; }
+.shadow-bar.active .bar-item:nth-child(24),
+.shadow-bar.active .skill-tag:nth-child(24) { transition-delay: 0.72s; }
+.shadow-bar.active .bar-item:nth-child(25),
+.shadow-bar.active .skill-tag:nth-child(25) { transition-delay: 0.75s; }
+.shadow-bar.active .bar-item:nth-child(26),
+.shadow-bar.active .skill-tag:nth-child(26) { transition-delay: 0.78s; }
+.shadow-bar.active .bar-item:nth-child(27),
+.shadow-bar.active .skill-tag:nth-child(27) { transition-delay: 0.81s; }
+.shadow-bar.active .bar-item:nth-child(28),
+.shadow-bar.active .skill-tag:nth-child(28) { transition-delay: 0.84s; }
+.shadow-bar.active .bar-item:nth-child(29),
+.shadow-bar.active .skill-tag:nth-child(29) { transition-delay: 0.87s; }
+.shadow-bar.active .bar-item:nth-child(30),
+.shadow-bar.active .skill-tag:nth-child(30) { transition-delay: 0.9s; }
