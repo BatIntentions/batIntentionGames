@@ -4,7 +4,7 @@ document.querySelectorAll('.shadow-bar').forEach(bar => {
     let timer = null;
 
     bar.addEventListener('mouseenter', () => {
-        timer = setTimeout(() => bar.classList.add('active'), 180);
+        timer = setTimeout(() => bar.classList.add('active'), 60);
     });
 
     bar.addEventListener('mouseleave', () => {

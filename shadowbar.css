@@ -36,6 +36,45 @@
     opacity: 1;
 }
 
+.shadow-bar.active {
+    overflow: visible;
+}
+
+/* ═══════════════════════════════════════════
+   Hover bar extensions
+   ═══════════════════════════════════════════ */
+
+.bar-left::before,
+.bar-right::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+
+/* extend upward */
+.bar-left::before {
+    top: -80px;
+}
+.bar-right::before {
+    top: -60px;
+}
+
+.bar-left::after,
+.bar-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 40px;
+    bottom: -40px;
+    width: auto;
+    z-index: -1;
+}
+
+
+
 /* ═══════════════════════════════════════════
    TOP BAR — Skills & Interests
    ═══════════════════════════════════════════ */
@@ -43,18 +82,19 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 380px;
-    max-height: 40px;
+    width: 480px;
+    max-height: 46px;
     border-top: none;
     border-radius: 0 0 6px 6px;
 }
 
 .bar-top.active {
     transition: all 0.6s cubic-bezier(.2,.8,.2,1);
-    max-height: 80vh;
-    width: 90vw;
+    max-height: 90vh;
+    width: 95vw;
     max-width: 800px;
     background: rgba(0,0,0,0.92);
+    overflow-y: auto;
 }
 .bar-top .bar-content {
     display: flex;
@@ -134,7 +174,7 @@
 
 .bar-left.active {
     transition: all 0.6s cubic-bezier(.2,.8,.2,1);
-    max-width: 3950px;
+    max-width: 550px;
     background: rgba(0,0,0,0.92);
 }
 
