@@ -17,7 +17,7 @@
 /* ── handle (label strip) ── */
 .bar-handle {
     padding: 10px;
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     letter-spacing: 3px;
     text-align: center;
     opacity: 0.6;
@@ -71,18 +71,54 @@
     padding: 5px 14px;
     border: 1px solid rgba(255,255,255,0.12);
     border-radius: 2px;
-    font-size: 0.68rem;
-    letter-spacing: 2px;
-    color: #aaa;
+    font-size: 0.83rem;
+    letter-spacing: 2px;    
+    color: #d4d4d4;         
+    font-weight: 400;     
     font-family: "Cinzel", serif;
     transition: all 0.3s ease;
     cursor: default;
+    position: relative;
 }
 .skill-tag:hover {
     color: #fff;
     border-color: rgba(255,255,255,0.35);
     background: rgba(255,255,255,0.04);
 }
+.skill-tag::after {
+
+    top: calc(100% + 8px);    
+    bottom: auto; 
+    content: attr(data-tip);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.95);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #e0e0e0;
+    font-size: 0.8rem;
+    font-weight: 550;
+    letter-spacing: 0.8px;
+    padding: 10px 16px;
+    border-radius: 3px;
+    white-space: pre-wrap;
+    max-width: 320px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.skill-tag:hover::after {
+    opacity: 1;
+}
+
+/* hide tooltip if no data-tip attribute */
+.skill-tag:not([data-tip])::after {
+    display: none;
+}
+
 
 /* ═══════════════════════════════════════════
    LEFT BAR — Professional Work
@@ -205,12 +241,13 @@
    SHARED — bar items (links)
    ═══════════════════════════════════════════ */
 .bar-item {
-    text-decoration: none;
-    color: #aaa;
+    text-decoration: none;  
+    color: #d4d4d4;           /*  was #aaa */
+    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 0.72rem;
+    font-size: 0.92rem;
     letter-spacing: 1.5px;
     font-family: "Cinzel", serif;
     padding: 6px 4px;
@@ -261,9 +298,10 @@ img.thumb {
     width: 100%;
     text-align: center;
     font-family: "Cinzel", serif;
-    font-size: 0.55rem;
+    font-size: 1.0rem;
     letter-spacing: 3px;
     color: rgba(255,255,255,0.3);
+    font-weight: 400;
     text-transform: uppercase;
     padding: 10px 0 6px 0;
     border-top: 1px solid rgba(255,255,255,0.06);
