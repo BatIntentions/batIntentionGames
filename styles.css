@@ -379,6 +379,14 @@ body::after {
 
 /* Individual interactive seal */
 .identity-seal {
+    appearance: none;
+    -webkit-appearance: none;
+ 
+    padding: 0;
+ 
+    font: inherit;
+ 
+    color: inherit;
     position: relative;
 
     width: 72px;
@@ -398,7 +406,16 @@ body::after {
         transform 0.2s ease,
         filter 0.2s ease;
 }
+.identity-seal[aria-expanded="true"]
+.seal-tooltip {
+    opacity: 1;
 
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
 
 /* Actual pixel seal artwork */
 .seal-image {
@@ -533,85 +550,113 @@ body::after {
         translateY(0);
 }
 
-
-/* ═══════════════════════════════════════════
-   SMALL SCREEN SAFETY
-   ═══════════════════════════════════════════ */
-
-@media (max-width: 600px) {
-
-    .identity-seals {
-        gap: 12px;
-        margin-top: 24px;
-    }
-
-    .identity-seal {
-        width: 56px;
-        height: 56px;
-        flex-basis: 56px;
-    }
-
-    .seal-image {
-        width: 56px;
-        height: 56px;
-    }
-
-    .seal-tooltip {
-        width: 210px;
-    }
-}
 /* ═══════════════════════════════════════════
    MOBILE
    ═══════════════════════════════════════════ */
 
 @media (max-width: 768px) {
 
-    /* Hero */
-    .title > h1 {
-        font-size: clamp(2rem, 10vw, 3.5rem);
-        letter-spacing: 5px;
-        padding: 0 20px;
+    .title {
+        box-sizing: border-box;
+
+        width: 100%;
+
+        padding:
+            0
+            48px;
     }
 
+    .title > h1 {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        font-size:
+            clamp(
+                1.65rem,
+                8vw,
+                2.8rem
+            );
+
+        line-height: 1.15;
+
+        letter-spacing: 3px;
+
+        white-space: normal;
+
+        overflow-wrap: normal;
+
+        text-align: center;
+    }
+
+
     @keyframes textBreath {
-        0%, 100% {
-            letter-spacing: 5px;
+
+        0%,
+        100% {
+            letter-spacing: 3px;
             opacity: 1;
         }
 
         50% {
-            letter-spacing: 6px;
+            letter-spacing: 4px;
+
             opacity: 0.95;
         }
+
     }
 
-    /* Seals */
+
     .identity-seals {
-        gap: 10px;
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 7px;
+
+        box-sizing: border-box;
+
         margin-top: 22px;
-        padding: 0 12px;
+
+        padding: 0;
     }
+
 
     .identity-seal {
-        width: 54px;
-        height: 54px;
-        flex: 0 0 54px;
+        width: 50px;
+        height: 50px;
+
+        flex:
+            0 0 50px;
     }
+
 
     .seal-image {
-        width: 54px;
-        height: 54px;
+        width: 50px;
+        height: 50px;
     }
 
-    /* Don't throw a 250px tooltip off-screen */
+
     .seal-tooltip {
         position: fixed;
 
         left: 50%;
+        bottom: 84px;
         top: auto;
-        bottom: 90px;
 
-        width: min(280px, calc(100vw - 50px));
+        width:
+            min(
+                280px,
+                calc(100vw - 48px)
+            );
+
+        box-sizing: border-box;
 
         transform:
             translateX(-50%)
@@ -620,15 +665,76 @@ body::after {
         z-index: 200;
     }
 
-    .identity-seal:hover .seal-tooltip,
-    .identity-seal:focus-visible .seal-tooltip {
-        transform:
-            translateX(-50%)
-            translateY(0);
-    }
+/* ═══════════════════════════════════════════
+   MOBILE SEAL TOOLTIPS
+   JS / aria-expanded owns the open state
+   ═══════════════════════════════════════════ */
 
-    /* Ghost text isn't useful on a tiny screen */
+.seal-tooltip {
+    position: fixed;
+
+    left: 50%;
+    right: auto;
+
+    top: auto;
+    bottom: 84px;
+
+    width: min(280px, calc(100vw - 48px));
+
+    box-sizing: border-box;
+
+    transform:
+        translateX(-50%)
+        translateY(5px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 200;
+}
+
+
+/* Disable sticky/synthetic mobile hover states */
+.identity-seal:hover .seal-tooltip,
+.identity-seal:focus .seal-tooltip,
+.identity-seal:focus-visible .seal-tooltip {
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translateX(-50%)
+        translateY(5px);
+}
+
+
+/* Only the explicit JS state opens a mobile tooltip */
+.identity-seal[aria-expanded="true"] .seal-tooltip {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* Don't retain desktop hover movement on touch */
+.identity-seal:hover,
+.identity-seal:focus {
+    transform: none;
+}
+
+
+/* Give the selected seal explicit feedback instead */
+.identity-seal[aria-expanded="true"] {
+    transform:
+        translateY(-3px)
+        scale(1.06);
+}
+
+
     .ghost-text {
         display: none;
     }
+
 }

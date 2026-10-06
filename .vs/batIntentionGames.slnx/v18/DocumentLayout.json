@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\skills.html||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:skills.html||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\skills.css||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:skills.css||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\styles.css||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:styles.css||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\js\\mainControl.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\mainControl.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\index.html||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -22,50 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "skills.html",
+              "DocumentMoniker": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\skills.html",
+              "RelativeDocumentMoniker": "skills.html",
+              "ToolTip": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\skills.html",
+              "RelativeToolTip": "skills.html",
+              "ViewState": "AgIAAL8BAAAAAAAAAAAQwNABAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-10-06T10:36:09.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "mainControl.js",
+              "DocumentMoniker": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\js\\mainControl.js",
+              "RelativeDocumentMoniker": "js\\mainControl.js",
+              "ToolTip": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\js\\mainControl.js",
+              "RelativeToolTip": "js\\mainControl.js",
+              "ViewState": "AgIAANkAAAAAAAAAAAAgwAcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-10-06T10:11:56.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "skills.css",
+              "DocumentMoniker": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\skills.css",
+              "RelativeDocumentMoniker": "skills.css",
+              "ToolTip": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\skills.css",
+              "RelativeToolTip": "skills.css",
+              "ViewState": "AgIAAM0DAAAAAAAAAAAAAO8DAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-06T09:29:26.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "shadowbar.css",
               "DocumentMoniker": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\shadowbar.css",
               "RelativeDocumentMoniker": "shadowbar.css",
               "ToolTip": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\shadowbar.css",
               "RelativeToolTip": "shadowbar.css",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAgwCgBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAPYCAAAAAAAAAAAgwCQDAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-10-05T15:24:59.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "styles.css",
               "DocumentMoniker": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\styles.css",
               "RelativeDocumentMoniker": "styles.css",
               "ToolTip": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\styles.css",
               "RelativeToolTip": "styles.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0CAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABcCAAAAAAAAAAAQwDQCAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-10-05T13:28:27.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\index.html",
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\kcorlett\\OneDrive - Microsoft\\Desktop\\batIntentionGames\\batIntentionGames\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAANwAAAAAAAAAAAAgwOQAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAADEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-10-05T13:23:03.321Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
